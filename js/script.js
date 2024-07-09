@@ -27,12 +27,13 @@ window.onscroll = () =>{
     searchForm.classList.remove('active');
     cartItem.classList.remove('active');
 }
+
 document.querySelectorAll('.home .home-parallax').forEach(elm => {
     elm.style.backgroundPositionY = (window.pageYOffset * 0.5) + 'px';
 });
 
-document.querySelectorAll('.home .home-parallax').forEach(elm => {
-    window.addEventListener('scroll', () => {
+window.addEventListener('scroll', () => {
+    document.querySelectorAll('.home .home-parallax').forEach(elm => {
         let scroll = window.pageYOffset;
         elm.style.backgroundPositionY = (scroll * 0.5) + 'px';
     });
